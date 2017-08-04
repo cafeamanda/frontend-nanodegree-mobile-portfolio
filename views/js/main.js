@@ -419,7 +419,7 @@ var resizePizzas = function(size) {
     }
   }
 
-  requestAnimationFrame(function() {changeSliderLabel(size)});
+  requestAnimationFrame(function() {changeSliderLabel(size);});
 
   // Iterates through pizza elements on the page and changes their widths
   // Borrowed from Cam's solution in lesson 8.10
@@ -446,7 +446,7 @@ var resizePizzas = function(size) {
     }
   }
 
-  requestAnimationFrame(function() {changePizzaSizes(size)});
+  requestAnimationFrame(function() {changePizzaSizes(size);});
 
   // User Timing API is awesome
   window.performance.mark("mark_end_resize");
@@ -491,7 +491,6 @@ function updatePositions() {
   var items = document.querySelectorAll('.mover');
   var k = document.body.scrollTop/1250;
   var phases = [];
-  var positions = [];
 
   for (var i = 0; i < items.length; i++) {
     phases.push(Math.sin(k + (i % 5)));
